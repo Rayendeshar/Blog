@@ -20,4 +20,12 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('frontend.index');
 });
+Route::get('/madam', function () {
+    return view('backend.index');
+});
+Route::get('/blog/create', function () {
+    return view('backend.blog.create');
+});
+Route::post('/blog/store/','Blog\BlogController@store');
+
 
