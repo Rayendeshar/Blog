@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Blog;
-use App\Models\BlogModel\Blog;
+use App\Models\BlogModel\About;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blog = Blog::get();
-        return view('backend.blog.index',compact('blog'));
+        $about=about::get();
+        return view('backend.about.index',compact('about'));
+
     }
 
     /**
@@ -25,7 +26,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view ('backend.blog.create');
+        return view('backend.about.create');
     }
 
     /**
@@ -36,19 +37,22 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-   $request->validate([
-       'title'=>'required|unique:blogs',
-       'description'=>'required',
-   ]);
-        $blog=new Blog();
-    $blog->title=$request->title;
-    $blog->description=$request->description;
-    if($blog->save()){
-    return redirect()->action('Blog\BlogController@index');
-    }
-    else{
-        return redirect()->back();
-    }
+      $request->validate([
+          'title'=>'required',
+          'description'=>'required',
+          
+     ]);
+     $about=new about();
+     $about->title=$request->title;
+     $about->description=$request->description;
+    
+     if($about->save()){
+        return redirect()->action('Blog\AboutController@index');
+        } 
+        else{
+            return redirect()->back();
+        }
+
     }
 
     /**
@@ -70,8 +74,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $blog =Blog::find($id);
-        return view('backend.blog.edit',compact('blog'));
+        $about=About::find($id);
+        return view('backend.about.edit',compact ('about'));
     }
 
     /**
@@ -83,16 +87,17 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $blog =Blog::find($id);
-        $blog->title= $request->title;
-        $blog->description=$request->description;
-        if($blog->save())
-        {
-            return redirect()->action('Blog\BlogController@index');
-                }else{
-                    return redirect()->back();
-                }
+        $about=About::find($id);
+     $about->title=$request->title;
+     $about->description=$request->description;
+    
+     if($about->save()){
+        return redirect()->action('Blog\AboutController@index');
+        } 
+        else{
+            return redirect()->back();
     }
+}
 
     /**
      * Remove the specified resource from storage.

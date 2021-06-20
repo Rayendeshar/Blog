@@ -6,19 +6,18 @@
 					
 					<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
 						<div class="form-title">
-							<h4>Add new blog</h4>
-              <a href="blog/create/">Add</a>
+							<h4>Edit</h4>
 						</div>
 						<div class="form-body">
-							 <form method="post" action="/blog/store" enctype="multipart/form">
+							 <form method="post" action="/blog/{{$blog->id}}" enctype="multipart/form">
                               {{@csrf_field()}}
                             <div class="form-group"> 
                                 <label for="exampleInputEmail1">Blog Title</label> 
-                                <input type="text" required class="form-control" id="title" name="title" placeholder="Enter Blog Title">
+                                <input type="text" required class="form-control" value="{{$blog->title}}" id="title" name="title" placeholder="Enter Blog Title">
                     </div>
                      <div class="form-group">
                           <label for="exampleInputPassword1">Description</label>
-                          <textarea class="form-control" required name="description" id="description" rows="5" cols="700">
+                          <textarea class="form-control" required  value="{{$blog->description}}" name="description" id="description" rows="5" cols="700">
 </textarea>
 
 </div>  
@@ -38,4 +37,4 @@
 				</div>
 			</div>
 		</div>
-        @endsection
+@endsection

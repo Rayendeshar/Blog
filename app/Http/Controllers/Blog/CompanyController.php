@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Blog;
-use App\Models\BlogModel\Blog;
+use App\Models\BlogModel\Company;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blog = Blog::get();
-        return view('backend.blog.index',compact('blog'));
+        $company = company::get();
+        return view('backend.company.index', compact('company'));
     }
 
     /**
@@ -25,7 +25,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view ('backend.blog.create');
+        return view ('backend.company.create');
     }
 
     /**
@@ -36,20 +36,25 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-   $request->validate([
-       'title'=>'required|unique:blogs',
-       'description'=>'required',
-   ]);
-        $blog=new Blog();
-    $blog->title=$request->title;
-    $blog->description=$request->description;
-    if($blog->save()){
-    return redirect()->action('Blog\BlogController@index');
-    }
-    else{
-        return redirect()->back();
-    }
-    }
+        // dd($request->all());
+        $request->validate([
+            'name'=>'required',
+            'address'=>'required',
+            'phone'=>'required',
+            'email'=>'required',
+        ]);
+             $company=new company();
+         $company->name=$request->name;
+         $company->address=$request->address;
+         $company->phone=$request->phone;
+         $company->email=$request->email;
+         if($company->save()){
+         return redirect()->action('Blog\CompanyController@index');
+         } 
+         else{
+             return redirect()->back();
+         }
+         }
 
     /**
      * Display the specified resource.
@@ -70,8 +75,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $blog =Blog::find($id);
-        return view('backend.blog.edit',compact('blog'));
+        $company=Company::find($id);
+        return view('backend.company.edit',compact('company'));
     }
 
     /**
@@ -83,15 +88,17 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $blog =Blog::find($id);
-        $blog->title= $request->title;
-        $blog->description=$request->description;
-        if($blog->save())
-        {
-            return redirect()->action('Blog\BlogController@index');
-                }else{
-                    return redirect()->back();
-                }
+        $company=Company::find($id);
+         $company->name=$request->name;
+         $company->address=$request->address;
+         $company->phone=$request->phone;
+         $company->email=$request->email;
+         if($company->save()){
+         return redirect()->action('Blog\CompanyController@index');
+         } 
+         else{
+             return redirect()->back();
+         }
     }
 
     /**

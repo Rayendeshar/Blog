@@ -6,28 +6,24 @@
 					
 					<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
 						<div class="form-title">
-							<h4>Add new blog</h4>
-              <a href="blog/create/">Add</a>
+							<h4>About</h4>
 						</div>
 						<div class="form-body">
-							 <form method="post" action="/blog/store" enctype="multipart/form">
+							 <form method="post" action="/about/{{$about->id}}" enctype="multipart/form">
                               {{@csrf_field()}}
                             <div class="form-group"> 
-                                <label for="exampleInputEmail1">Blog Title</label> 
-                                <input type="text" required class="form-control" id="title" name="title" placeholder="Enter Blog Title">
+                                <label for="exampleInputEmail1">Title</label> 
+                                <input type="text" required class="form-control" value="{{$about->title}}" id="title" name="title" placeholder="Enter Title">
                     </div>
                      <div class="form-group">
                           <label for="exampleInputPassword1">Description</label>
                           <textarea class="form-control" required name="description" id="description" rows="5" cols="700">
-</textarea>
+                </textarea>
+                </div>
 
-</div>  
-                           <div class="form-group"> 
-                               <label for="exampleInputFile">File input</label> 
-                            
-                               <input type="file" id="exampleInputFile"> 
-                               <p class="help-block">Example block-level help text here.</p>
-                             </div> 
+
+                    
+                           
                                
                                     <button type="submit" class="btn btn-default">Submit</button> 
                                 </form> 

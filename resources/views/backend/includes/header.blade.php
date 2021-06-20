@@ -63,68 +63,38 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			  <li class="treeview">
                 <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>Components</span>
+                <span>Blogs</span>
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="grids.html"><i class="fa fa-angle-right"></i> Grids</a></li>
+                  <li><a href="/blog/index"><i class="fa fa-angle-right"></i> List</a></li>
                   <li><a href="media.html"><i class="fa fa-angle-right"></i> Media Css</a></li>
                 </ul>
               </li>
-              <li class="treeview">
-                <a href="charts.html">
-                <i class="fa fa-pie-chart"></i>
-                <span>Charts</span>
-                <span class="label label-primary pull-right">new</span>
-                </a>
-              </li>
-              <li class="treeview">
+			  <li class="treeview">
                 <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>UI Elements</span>
+                <span>About</span>
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="general.html"><i class="fa fa-angle-right"></i> General</a></li>
-                  <li><a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a></li>
-                  <li><a href="buttons.html"><i class="fa fa-angle-right"></i> Buttons</a></li>
-                  <li><a href="typography.html"><i class="fa fa-angle-right"></i> Typography</a></li>
+                  <li><a href="/about/index"><i class="fa fa-angle-right"></i> List</a></li>
+                  <li><a href="media.html"><i class="fa fa-angle-right"></i> Media Css</a></li>
                 </ul>
               </li>
-			  <li>
-                <a href="widgets.html">
-                <i class="fa fa-th"></i> <span>Widgets</span>
-                <small class="label pull-right label-info">08</small>
-                </a>
-              </li>
-              <li class="treeview">
+			  <li class="treeview">
                 <a href="#">
-                <i class="fa fa-edit"></i> <span>Forms</span>
+                <i class="fa fa-laptop"></i>
+                <span>Company</span>
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="forms.html"><i class="fa fa-angle-right"></i> General Forms</a></li>
-                  <li><a href="validation.html"><i class="fa fa-angle-right"></i> Form Validations</a></li>
+                  <li><a href="/company/index"><i class="fa fa-angle-right"></i> List</a></li>
+                  <li><a href="media.html"><i class="fa fa-angle-right"></i> Media Css</a></li>
                 </ul>
               </li>
-              <li class="treeview">
-                <a href="#">
-                <i class="fa fa-table"></i> <span>Tables</span>
-                <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="tables.html"><i class="fa fa-angle-right"></i> Simple tables</a></li>
-                </ul>
-              </li>
-              <li class="treeview">
-                <a href="#">
-                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                <i class="fa fa-angle-left pull-right"></i><small class="label pull-right label-info1">08</small><span class="label label-primary1 pull-right">02</span></a>
-                <ul class="treeview-menu">
-                  <li><a href="inbox.html"><i class="fa fa-angle-right"></i> Mail Inbox</a></li>
-                  <li><a href="compose.html"><i class="fa fa-angle-right"></i> Compose Mail </a></li>
-                </ul>
-              </li>
+
+
               <li class="treeview">
                 <a href="#">
                 <i class="fa fa-folder"></i> <span>Examples</span>
